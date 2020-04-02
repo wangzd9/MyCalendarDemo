@@ -89,6 +89,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:23.2.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.jakewharton:butterknife:7.0.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex:rxjava:1.1.0@jar" level="project" />
@@ -96,11 +97,10 @@
     <orderEntry type="library" name="Gradle: com.mcxiaoke.volley:library:1.0.19@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.0.0-beta4@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:retrofit:2.0.0-beta4@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:23.2.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.0.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.6.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.4@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.picasso:picasso:2.5.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:design:23.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:23.2.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7:23.2.1@aar" level="project" />
