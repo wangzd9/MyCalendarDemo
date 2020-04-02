@@ -18,10 +18,10 @@
             android:checkable="true"
             android:icon="@drawable/ic_receipt_grey_900_24dp"
             android:title="Week" />
-        <item
+        <!--<item
             android:id="@+id/aboutMe"
             android:checkable="true"
             android:icon="@drawable/ic_android_grey_900_24dp"
-            android:title="About Me" />
+            android:title="About Me" />-->
     </group>
 </menu>

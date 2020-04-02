@@ -12,7 +12,7 @@ import com.werb.mycalendardemo.MainActivity;
 import com.werb.mycalendardemo.R;
 import com.werb.mycalendardemo.database.AlarmDBSupport;
 import com.werb.mycalendardemo.models.CalendarEvent;
-import com.werb.mycalendardemo.pager.AboutMePager;
+/*import com.werb.mycalendardemo.pager.AboutMePager;*/
 import com.werb.mycalendardemo.pager.BasePager;
 import com.werb.mycalendardemo.pager.DayPager;
 import com.werb.mycalendardemo.pager.HomePager;
@@ -44,7 +44,7 @@ public class ContentFragment extends BaseFragment {
     private HomePager homePager;
     private DayPager dayPager;
     private WeekPager weekPager;
-    private AboutMePager aboutMePager;
+    /*private AboutMePager aboutMePager;*/
 
 
 
@@ -70,7 +70,7 @@ public class ContentFragment extends BaseFragment {
         homePager = new HomePager(mActivity);
         dayPager = new DayPager(mActivity);
         weekPager = new WeekPager(mActivity);
-        aboutMePager = new AboutMePager(mActivity);
+        /*aboutMePager = new AboutMePager(mActivity);*/
 
         //主界面添加数据
         mPageList= new ArrayList<>();
@@ -78,7 +78,7 @@ public class ContentFragment extends BaseFragment {
         mPageList.add(homePager);
         mPageList.add(dayPager);
         mPageList.add(weekPager);
-        mPageList.add(aboutMePager);
+       /* mPageList.add(aboutMePager);*/
 
         vpContent.setAdapter(new VpContentAdapter());
 
@@ -104,10 +104,10 @@ public class ContentFragment extends BaseFragment {
                         vpContent.setCurrentItem(2,false);
                         weekPager.initData();
                         break;
-                    case R.id.aboutMe:
+                    /*case R.id.aboutMe:
                         vpContent.setCurrentItem(3,false);
                         aboutMePager.initData();
-                        break;
+                        break;*/
                 }
                 item.setChecked(true);//点击了设置为选中状态
                 drawerLayout.closeDrawers();

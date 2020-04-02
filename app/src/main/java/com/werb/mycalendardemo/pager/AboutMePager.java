@@ -1,3 +1,4 @@
+/*
 package com.werb.mycalendardemo.pager;
 
 import android.app.Activity;
@@ -14,9 +15,11 @@ import com.werb.mycalendardemo.utils.Events;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+*/
 /**
  * Created by acer-pc on 2016/5/14.
- */
+ *//*
+
 public class AboutMePager extends BasePager implements View.OnClickListener {
 
     @Bind(R.id.about_bg)
@@ -63,3 +66,4 @@ public class AboutMePager extends BasePager implements View.OnClickListener {
         }
     }
 }
+*/
