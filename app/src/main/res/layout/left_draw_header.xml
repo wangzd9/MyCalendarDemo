@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="WANG"
+        android:textColor="@color/shenkonglan"
         android:textSize="15sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:id="@+id/textView"

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group>
         <item
             android:id="@+id/schedule"
             android:checkable="true"
             android:icon="@drawable/ic_schedule_grey_900_24dp"
+
             android:title="日程管理" />
 
         <item
