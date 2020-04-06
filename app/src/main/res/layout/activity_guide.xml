@@ -16,7 +16,7 @@
        android:textSize="16sp"
        android:textColor="#fff"
        android:gravity="center"
-       android:text="Start to experience ...."
+       android:text="开始使用"
        android:visibility="invisible"
        android:layout_alignParentBottom="true"
        android:layout_centerHorizontal="true"/>

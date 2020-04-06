@@ -11,31 +11,33 @@
         android:src="@drawable/bg_header" />
 
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity=""
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/nuuneoi"
         android:id="@+id/imageView"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_above="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignStart="@+id/textView"
+        android:layout_gravity=""
+        android:layout_marginStart="-8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/nuuneoi" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:text="WANG"
-        android:textColor="@color/shenkonglan"
-        android:textSize="15sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:id="@+id/textView"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:text="WANG"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@color/calendar_text_default"
+        android:textColorLink="@color/calendar_text_default"
+        android:textSize="20sp" />
 </RelativeLayout>
 
 
