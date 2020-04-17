@@ -72,7 +72,7 @@
             android:layout_toRightOf="@id/iv_color_lv"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="罗勒绿"/>
+            android:text="绿"/>
 
         <CheckBox
             android:id="@+id/color_lv"
@@ -103,7 +103,7 @@
             android:layout_toRightOf="@id/iv_color_huang"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="耀眼黄"/>
+            android:text="黄"/>
 
         <CheckBox
             android:id="@+id/color_huang"
@@ -134,7 +134,7 @@
             android:layout_toRightOf="@id/iv_color_hong"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="番茄红"/>
+            android:text="深红"/>
 
         <CheckBox
             android:id="@+id/color_hong"
@@ -165,7 +165,7 @@
             android:layout_toRightOf="@id/iv_color_hui"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="低调灰"/>
+            android:text="灰"/>
 
         <CheckBox
             android:id="@+id/color_hui"
@@ -196,7 +196,7 @@
             android:layout_toRightOf="@id/iv_color_juhong"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="橘子红"/>
+            android:text="浅红"/>
 
         <CheckBox
             android:id="@+id/color_juhong"
@@ -227,7 +227,7 @@
             android:layout_toRightOf="@id/iv_color_shenlan"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="深空蓝"/>
+            android:text="蓝"/>
 
         <CheckBox
             android:id="@+id/color_shenlan"

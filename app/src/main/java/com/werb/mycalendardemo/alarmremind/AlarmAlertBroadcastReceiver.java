@@ -40,7 +40,7 @@ public class AlarmAlertBroadcastReceiver extends BroadcastReceiver {
 
     private void showAlarmDialog(Context context, AlarmBean bean) {
         vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        playMusicAndVibrate(context,bean);
+        /*playMusicAndVibrate(context,bean);*/
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("距离您定的日期 "+bean.getTitle()+" 已经到了哦！")
@@ -71,6 +71,7 @@ public class AlarmAlertBroadcastReceiver extends BroadcastReceiver {
      * @param context
      */
     private void playMusicAndVibrate(Context context,AlarmBean bean){
+
         Uri ringtoneUri = Uri.parse(bean.getAlarmTonePath());
         if (mediaPlayer == null) {
             mediaPlayer = new MediaPlayer();

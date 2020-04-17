@@ -6,8 +6,8 @@ ext{
     android = [compileSdkVersion: 28,
                buildToolsVersion: "28.0.3",
                applicationId    : "com.werb.mycalendardemo",
-               minSdkVersion    : 19,
-               targetSdkVersion : 22,
+               minSdkVersion    : 23,
+               targetSdkVersion : 28,
                versionCode      : 1,
                versionName      : "1.0"]
 

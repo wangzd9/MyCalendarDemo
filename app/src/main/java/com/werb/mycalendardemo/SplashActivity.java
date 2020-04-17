@@ -46,34 +46,42 @@ import retrofit2.Retrofit;
 
 public class SplashActivity extends AppCompatActivity {
 
-    @Bind(R.id.version_code)
+    /*@Bind(R.id.version_code)
     TextView tvVersionCode;
 
     private String mVersionName;//版本名
     private int mVersionCode;//版本号
     private String mDesc;//版本描述
-    private String mdownloadUrl;//新版本下载网站
+    private String mdownloadUrl;//新版本下载网站*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Timer timer =new Timer();
+        TimerTask task =new TimerTask() {
+            @Override
+            public void run() {
+                jumpToNextPage();
+            }
+        };
+        timer.schedule(task,1500);
 
-        ButterKnife.bind(this);//为使用注解进行注册
+        /*ButterKnife.bind(this);//为使用注解进行注册
 
         mVersionName= getVersionName();
         mVersionCode= getVersionCode();
 
         tvVersionCode.setText("版本号:" + mVersionName);
 
-        checkVersion();
+        checkVersion();*/
 
     }
 
     /**
      * 从获取服务器获取版本信息进行校验
      */
-    public void checkVersion() {
+    /*public void checkVersion() {
         //利用volley框架进行http请求
         RequestQueue requestQueue= Volley.newRequestQueue(SplashActivity.this);
         JsonObjectRequest request=new JsonObjectRequest(GlobalContants.SERVER_URL+"update.json", new Response.Listener<JSONObject>() {
@@ -127,11 +135,11 @@ public class SplashActivity extends AppCompatActivity {
         });
         requestQueue.add(request);
     }
-    /**
+    *//**
      * 获取版本名称
      *
      * @return
-     */
+     *//*
     public String getVersionName() {
         PackageManager packageManager = getPackageManager();
         try {
@@ -144,11 +152,11 @@ public class SplashActivity extends AppCompatActivity {
         return null;
     }
 
-    /**
+    *//**
      * 获取版本号
      *
      * @return
-     */
+     *//*
     public int getVersionCode() {
         PackageManager packageManager = getPackageManager();
         try {
@@ -161,9 +169,9 @@ public class SplashActivity extends AppCompatActivity {
         return 0;
     }
 
-    /**
+    *//**
      * 升级对话框
-     */
+     *//*
     private void showUpdateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("最新版本:" + mVersionName);
@@ -193,9 +201,9 @@ public class SplashActivity extends AppCompatActivity {
         builder.show();
     }
 
-    /**
+    *//**
      * 下载APK文件
-     */
+     *//*
     private void downLoadAPK() {
         //OkHttp
 
@@ -257,13 +265,13 @@ public class SplashActivity extends AppCompatActivity {
         }
 
     }
-
-    @Override
+*/
+    /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         jumpToNextPage();
 
-    }
+    }*/
 
     /**
      * 跳转下一个页面

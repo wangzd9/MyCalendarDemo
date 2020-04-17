@@ -40,7 +40,7 @@
             android:layout_toRightOf="@id/iv_remind"
             android:layout_marginLeft="40dp"
             android:textColor="#000"
-            android:text="无"/>
+            android:text="准时提醒"/>
 
         <CheckBox
             android:id="@+id/no_remind"

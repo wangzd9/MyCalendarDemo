@@ -180,7 +180,7 @@ public class AlarmBean implements Serializable {
         calendar.set(Calendar.MINUTE, getStartTimeMinute());
         calendar.set(Calendar.SECOND, 0);
         switch (getAlarmTime()) {
-            case "无":
+            case "准时提醒":
                 break;
             case "提前十分钟提醒":
                 calendar.add(Calendar.MINUTE, -10);
