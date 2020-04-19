@@ -33,14 +33,16 @@ public class AlarmAlertBroadcastReceiver extends BroadcastReceiver {
         context.sendBroadcast(alarmServiceIntent, null);
 
         Bundle bundle = intent.getExtras();
+        //assert bundle != null;
         AlarmBean alarm = (AlarmBean) bundle.getSerializable("alarm");
 
+        //assert alarm != null;
         showAlarmDialog(context,alarm);
     }
 
     private void showAlarmDialog(Context context, AlarmBean bean) {
         vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        /*playMusicAndVibrate(context,bean);*/
+        playMusicAndVibrate(context,bean);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("距离您定的日期 "+bean.getTitle()+" 已经到了哦！")

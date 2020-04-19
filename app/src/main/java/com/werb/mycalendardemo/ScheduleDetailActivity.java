@@ -7,6 +7,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.RelativeLayout;
@@ -92,10 +93,12 @@ public class ScheduleDetailActivity extends AppCompatActivity {
         detail_alarm_description.setText(bean.getDescription());
 
         int colorId = ColorUtils.getColorFromStr(bean.getAlarmColor());
-        detail_layout.setBackgroundColor(getResources().getColor(colorId));
+        //detail_layout.setBackgroundColor(getResources().getColor(colorId));
+        detail_layout.setBackgroundColor(ContextCompat.getColor(this,colorId));
         Window window = getWindow();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setStatusBarColor(getResources().getColor(colorId));
+            //window.setStatusBarColor(getResources().getColor(colorId));
+            window.setStatusBarColor(ContextCompat.getColor(this,colorId));
         }
 
     }

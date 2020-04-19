@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -75,17 +76,27 @@ public class GuideActivity extends AppCompatActivity {
 
     private int getDeviceWidth() {
         // 得到屏幕的宽度
-        WindowManager wm = (WindowManager) getBaseContext()
+        /*WindowManager wm = (WindowManager) getBaseContext()
                 .getSystemService(Context.WINDOW_SERVICE);
-        int width = wm.getDefaultDisplay().getWidth();
+        int width = wm.getDefaultDisplay().getWidth();*/
+        DisplayMetrics dm = new DisplayMetrics();
+
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int width = dm.widthPixels;
         return width;
     }
 
     private int getDeviceHeight() {
         // 得到屏幕的宽度
-        WindowManager wm = (WindowManager) getBaseContext()
+        /*WindowManager wm = (WindowManager) getBaseContext()
                 .getSystemService(Context.WINDOW_SERVICE);
-        int height = wm.getDefaultDisplay().getHeight();
+        int height = wm.getDefaultDisplay().getHeight();*/
+        DisplayMetrics dm = new DisplayMetrics();
+
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        int height = dm.heightPixels;
         return height;
     }
 

@@ -219,8 +219,8 @@ public class MainActivity extends AppCompatActivity implements RapidFloatingActi
         items.add(new RFACLabelItem<Integer>()
                         .setLabel("活动")
                         .setResId(R.drawable.ic_access_alarms_white_24dp)
-                        .setIconNormalColor(0xffd84315)
-                        .setIconPressedColor(0xffbf360c)
+                        .setIconNormalColor(0xffFF7256)
+                        .setIconPressedColor(0xffFF7256)
                         .setLabelSizeSp(14)
                         .setWrapper(0)
         );

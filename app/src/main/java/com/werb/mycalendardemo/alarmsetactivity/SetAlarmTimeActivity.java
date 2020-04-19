@@ -50,7 +50,7 @@ public class SetAlarmTimeActivity extends AppCompatActivity implements View.OnCl
                 min10_remind.setChecked(false);
                 hour1_remind.setChecked(false);
                 day1_remind.setChecked(false);
-                intent.putExtra("remind", "无");
+                intent.putExtra("remind", "准时提醒");
                 setResult(1, intent);
                 finish();
                 break;

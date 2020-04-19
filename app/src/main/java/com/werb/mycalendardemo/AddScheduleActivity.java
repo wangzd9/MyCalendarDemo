@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -297,10 +298,13 @@ public class AddScheduleActivity extends AppCompatActivity {
             insert_update_title.setText("修改活动");
             //动态改变颜色
             int colorId = ColorUtils.getColorFromStr(bean.getAlarmColor());
-            action_bar.setBackgroundColor(getResources().getColor(colorId));
+            //action_bar.setBackgroundColor(getResources().getColor(colorId));
+
+            action_bar.setBackgroundColor(ContextCompat.getColor(this,colorId));
             Window window = getWindow();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                window.setStatusBarColor(getResources().getColor(colorId));
+                //window.setStatusBarColor(getResources().getColor(colorId));
+                window.setStatusBarColor(ContextCompat.getColor(this,colorId));
             }
         } else {
             insert_update_title.setText("新建活动");
@@ -414,10 +418,12 @@ public class AddScheduleActivity extends AppCompatActivity {
                     alarmBean.setAlarmColor(data.getStringExtra("color"));
                     //动态改变颜色
                     int colorId = ColorUtils.getColorFromStr(data.getStringExtra("color"));
-                    action_bar.setBackgroundColor(getResources().getColor(colorId));
+                    //action_bar.setBackgroundColor(getResources().getColor(colorId));
+                    action_bar.setBackgroundColor(ContextCompat.getColor(this,colorId));
                     Window window = getWindow();
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        window.setStatusBarColor(getResources().getColor(colorId));
+                        //window.setStatusBarColor(getResources().getColor(colorId));
+                        window.setStatusBarColor(ContextCompat.getColor(this,colorId));
                     }
 
                 }
