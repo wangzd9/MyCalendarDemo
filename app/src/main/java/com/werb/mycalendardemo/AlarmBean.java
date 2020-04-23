@@ -210,6 +210,7 @@ public class AlarmBean implements Serializable {
     }
 
     public void schedule(Context context) {
+
         Intent myIntent = new Intent(context, AlarmAlertBroadcastReceiver.class);
         myIntent.putExtra("alarm", this);
 

@@ -34,10 +34,11 @@ public class AlarmAlertBroadcastReceiver extends BroadcastReceiver {
 
         Bundle bundle = intent.getExtras();
         //assert bundle != null;
+        if(bundle.getSerializable("alarm")!=null){
         AlarmBean alarm = (AlarmBean) bundle.getSerializable("alarm");
 
         //assert alarm != null;
-        showAlarmDialog(context,alarm);
+        showAlarmDialog(context,alarm);}
     }
 
     private void showAlarmDialog(Context context, AlarmBean bean) {

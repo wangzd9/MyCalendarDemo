@@ -7,7 +7,7 @@ android {
         abortOnError false
     }
     compileSdkVersion 23
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId rootProject.ext.android.applicationId
@@ -18,6 +18,10 @@ android {
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -27,6 +31,12 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+        }
+    }
 }
 
 dependencies {
@@ -34,6 +44,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:23.2.1'
     implementation 'com.android.support:support-v4:23.2.1'
+    implementation 'com.alibaba:fastjson:1.2.8'
+    implementation 'com.google.code.gson:gson:2.2.4'
     implementation 'com.android.support:design:23.2.1'
     //注解 butterKnife
     implementation 'com.jakewharton:butterknife:7.0.1'
@@ -54,4 +66,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
     //加载图片
     implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation files('libs/Msc.jar')
 }
