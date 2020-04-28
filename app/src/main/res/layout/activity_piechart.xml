@@ -57,7 +57,7 @@
             android:id="@+id/btn_show_center_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="显示中间文字"/>
+            android:text="中间文字" />
 
         <Button
             android:id="@+id/btn_save_pic"

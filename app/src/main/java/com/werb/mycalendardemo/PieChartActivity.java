@@ -1,12 +1,14 @@
 package com.werb.mycalendardemo;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.view.View;
 import android.widget.Button;
-
+import java.util.Calendar;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -19,15 +21,21 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.ColorTemplate;
-
+import com.werb.mycalendardemo.database.AlarmDBSupport;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.OnClick;
 
 //public class PieChartActivity extends AppCompatActivity
 
 public class PieChartActivity extends Activity implements OnChartValueSelectedListener, View.OnClickListener {
 
-    private PieChart mPieChart;
 
+    private PieChart mPieChart;
+    private List<Object> list;
     //显示百分比
     private Button btn_show_percentage;
     //显示类型
@@ -102,13 +110,34 @@ public class PieChartActivity extends Activity implements OnChartValueSelectedLi
 
         //变化监听
         mPieChart.setOnChartValueSelectedListener(this);
+        Calendar calendar = Calendar.getInstance();
+        //Context mActivity=new Activity();
 
-        //模拟数据
+        list= new AlarmDBSupport(this).getDataByDay(calendar);
+        int i=0;
+        //AlarmBean alarmBean = (AlarmBean) list.get(i);
         ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
-        entries.add(new PieEntry(40, "优秀"));
+        int total=1440;
+        for(int time=0;i<list.size();i++)
+        {
+            AlarmBean alarmBean = (AlarmBean) list.get(i);
+            if(alarmBean.getStartTimeHour()==alarmBean.getEndTimeHour())
+            {
+                time=alarmBean.getEndTimeMinute()-alarmBean.getStartTimeMinute();
+            }
+            else{
+                time=(alarmBean.getEndTimeHour()-alarmBean.getStartTimeHour()-1)*60+60-alarmBean.getStartTimeMinute()+alarmBean.getEndTimeMinute();
+            }
+            total-=time;
+            entries.add(new PieEntry(time, alarmBean.getTitle()));
+        }
+        entries.add(new PieEntry(total, "空闲"));
+        //模拟数据
+        //ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
+        /*entries.add(new PieEntry(40, "优秀"));
         entries.add(new PieEntry(20, "满分"));
         entries.add(new PieEntry(30, "及格"));
-        entries.add(new PieEntry(10, "不及格"));
+        entries.add(new PieEntry(10, "不及格"));*/
 
         //设置数据
         setData(entries);
@@ -132,7 +161,7 @@ public class PieChartActivity extends Activity implements OnChartValueSelectedLi
     //设置中间文字
     private SpannableString generateCenterSpannableText() {
         //原文：MPAndroidChart\ndeveloped by Philipp Jahoda
-        SpannableString s = new SpannableString("刘某人程序员\n我仿佛听到有人说我帅");
+        SpannableString s = new SpannableString("今日时间分配");
         //s.setSpan(new RelativeSizeSpan(1.7f), 0, 14, 0);
         //s.setSpan(new StyleSpan(Typeface.NORMAL), 14, s.length() - 15, 0);
         // s.setSpan(new ForegroundColorSpan(Color.GRAY), 14, s.length() - 15, 0);
@@ -144,7 +173,7 @@ public class PieChartActivity extends Activity implements OnChartValueSelectedLi
 
     //设置数据
     private void setData(ArrayList<PieEntry> entries) {
-        PieDataSet dataSet = new PieDataSet(entries, "三年级一班");
+        PieDataSet dataSet = new PieDataSet(entries, "活动颜色");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
 
@@ -187,6 +216,7 @@ public class PieChartActivity extends Activity implements OnChartValueSelectedLi
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()) {
             //显示百分比
             case R.id.btn_show_percentage:

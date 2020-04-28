@@ -220,17 +220,17 @@ public class MainActivity extends AppCompatActivity implements RapidFloatingActi
         rfaContent.setOnRapidFloatingActionContentLabelListListener(this);
         List<RFACLabelItem> items = new ArrayList<>();
         items.add(new RFACLabelItem<Integer>()
-                        .setLabel("活动")
+                        .setLabel("添加活动")
                         .setResId(R.drawable.ic_access_alarms_white_24dp)
-                        .setIconNormalColor(0xffFF7256)
-                        .setIconPressedColor(0xffFF7256)
+                        .setIconNormalColor(0xff63B8FF)
+                        .setIconPressedColor(0xff63B8FF)
                         .setLabelSizeSp(14)
                         .setWrapper(0));
                 items.add(new RFACLabelItem<Integer>()
-                        .setLabel("分配")
-                        .setResId(R.drawable.ic_access_alarms_white_24dp)
-                        .setIconNormalColor(0xffFF7256)
-                        .setIconPressedColor(0xffFF7256)
+                        .setLabel("时间分配")
+                        .setResId(R.drawable.ic_schedule_grey_900_24dp)
+                        .setIconNormalColor(0xff63B8FF)
+                        .setIconPressedColor(0xff63B8FF)
                         .setLabelSizeSp(14)
                         .setWrapper(1)
         );
