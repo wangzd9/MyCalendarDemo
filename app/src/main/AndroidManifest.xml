@@ -38,6 +38,7 @@
             android:launchMode="singleTask">
         </activity>
         <activity android:name=".AddScheduleActivity"/>
+        <activity android:name=".PieChartActivity"/>
         <activity android:name=".alarmsetactivity.SetRePlayActivity"/>
         <activity android:name=".alarmsetactivity.SetAlarmTimeActivity"/>
         <activity android:name=".alarmsetactivity.SetLocalActivity"/>

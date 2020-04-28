@@ -26,6 +26,7 @@ public class AlarmBean implements Serializable {
     private int startTimeMinute;
     private int endTimeHour;
     private int endTimeMinute;
+    private int totolTime;
     private String alarmTime;
     private String alarmColor;
     private String alarmTonePath;
@@ -132,7 +133,13 @@ public class AlarmBean implements Serializable {
     public void setAlarmTime(String alarmTime) {
         this.alarmTime = alarmTime;
     }
+    /*public int getTotolTime() {
+        return totolTime;
+    }
 
+    public void setTotolTime(int totolTime) {
+        this.totolTime = totolTime;
+    }*/
     public String getAlarmColor() {
         return alarmColor;
     }
@@ -248,6 +255,7 @@ public class AlarmBean implements Serializable {
                 ", local='" + local + '\'' +
                 ", description='" + description + '\'' +
                 ", replay='" + replay + '\'' +
+                //", totolTime='" + totolTime + '\'' +
                 '}';
     }
 }

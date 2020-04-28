@@ -216,10 +216,24 @@ public class AddScheduleActivity extends AppCompatActivity {
                 alarmBean.setEndTimeMinute(getToDay().get(Calendar.MINUTE));
             }
         }
+        /*if(isAllDay){
+            alarmBean.setTotolTime(1440);
+        }else {
+            int time=0;
+            if(alarmBean.getStartTimeHour()==alarmBean.getEndTimeHour())
+            {
+                time=alarmBean.getEndTimeMinute()-alarmBean.getStartTimeMinute();
+                alarmBean.setTotolTime(time);
+            }
+            else{
+                time=(alarmBean.getEndTimeHour()-alarmBean.getStartTimeHour()-1)*60+60-alarmBean.getStartTimeMinute()+alarmBean.getEndTimeMinute();
+                alarmBean.setTotolTime(time);
+            }
+        }*/
 
         //设置提醒时间
         if (alarm_remind.getText().toString().equals("选择提醒时间")) {
-            alarmBean.setAlarmTime("默认");
+            alarmBean.setAlarmTime("准时提醒");
         } else {
             alarmBean.setAlarmTime(alarm_remind.getText().toString());
         }

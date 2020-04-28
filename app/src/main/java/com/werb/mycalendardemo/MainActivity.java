@@ -31,6 +31,7 @@ import com.wangjie.rapidfloatingactionbutton.contentimpl.labellist.RapidFloating
 import com.werb.mycalendardemo.alarmremind.SendAlarmBroadcast;
 import com.werb.mycalendardemo.customview.calendar.CalendarView;
 import com.werb.mycalendardemo.fragment.ContentFragment;
+import com.werb.mycalendardemo.PieChartActivity;
 import com.werb.mycalendardemo.utils.BusProvider;
 import com.werb.mycalendardemo.utils.CalendarManager;
 import com.werb.mycalendardemo.utils.Events;
@@ -224,7 +225,14 @@ public class MainActivity extends AppCompatActivity implements RapidFloatingActi
                         .setIconNormalColor(0xffFF7256)
                         .setIconPressedColor(0xffFF7256)
                         .setLabelSizeSp(14)
-                        .setWrapper(0)
+                        .setWrapper(0));
+                items.add(new RFACLabelItem<Integer>()
+                        .setLabel("分配")
+                        .setResId(R.drawable.ic_access_alarms_white_24dp)
+                        .setIconNormalColor(0xffFF7256)
+                        .setIconPressedColor(0xffFF7256)
+                        .setLabelSizeSp(14)
+                        .setWrapper(1)
         );
         rfaContent
                 .setItems(items)
@@ -251,6 +259,12 @@ public class MainActivity extends AppCompatActivity implements RapidFloatingActi
         if (i == 0) {
             Intent intent = new Intent(MainActivity.this, AddScheduleActivity.class);
             intent.putExtra("type","mainToAdd");
+            startActivity(intent);
+            finish();
+        }
+        else if (i == 1) {
+            Intent intent = new Intent(MainActivity.this, PieChartActivity.class);
+            intent.putExtra("type","mainToPie");
             startActivity(intent);
             finish();
         }

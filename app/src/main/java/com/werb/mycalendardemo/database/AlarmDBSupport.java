@@ -71,7 +71,7 @@ public class AlarmDBSupport {
                 bean.setLocal(cursor.getString(14));
                 bean.setDescription(cursor.getString(15));
                 bean.setReplay(cursor.getString(16));
-
+                //bean.setTotolTime(cursor.getInt(17));
                 beanList.add(bean);
             }while (cursor.moveToNext());
         }
@@ -107,7 +107,7 @@ public class AlarmDBSupport {
                 bean.setLocal(cursor.getString(14));
                 bean.setDescription(cursor.getString(15));
                 bean.setReplay(cursor.getString(16));
-
+                //bean.setTotolTime(cursor.getInt(17));
                 beanList.add(bean);
             }while (cursor.moveToNext());
         }
@@ -140,7 +140,7 @@ public class AlarmDBSupport {
         bean.setLocal(cursor.getString(14));
         bean.setDescription(cursor.getString(15));
         bean.setReplay(cursor.getString(16));
-
+        //bean.setTotolTime(cursor.getInt(17));
         return bean;
     }
 
@@ -169,6 +169,7 @@ public class AlarmDBSupport {
         values.put("local",bean.getLocal());
         values.put("description",bean.getDescription());
         values.put("replay",bean.getReplay());
+        //values.put("totolTime",bean.getTotolTime());
         db.update("alarmlist",values,"_id=?",new String[]{id+""});
     }
 
@@ -191,7 +192,8 @@ public class AlarmDBSupport {
                 "alarmTonePath",
                 "local",
                 "description",
-                "replay"
+                "replay",
+                //"totolTime"
         };
         return db.query("alarmlist", columns, null, null, null, null,
                 null);
